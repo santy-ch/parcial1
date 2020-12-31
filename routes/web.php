@@ -23,4 +23,4 @@ Route::get('/zapatos', 'ZapatosController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
