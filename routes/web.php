@@ -17,10 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Auth::routes();
 
-Route::get('/zapatos', 'ZapatosController');
+
+Route::get('/zapatos', 'ZapatosController@index')->name('zapatos.index');
+Route::get('/zapatos/create', 'ZapatosController@create')->name('zapatos.create');
+Route::post('/zapatos', 'ZapatosController@store')->name('zapatos.store');
 
 Auth::routes();
-
 
