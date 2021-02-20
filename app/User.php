@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //relacion uno a muchos de la tabla 
+    public function userPedidos(){
+        return $this->hasMany(Pedido::class);
+    }
 }

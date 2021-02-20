@@ -13,9 +13,22 @@ class CreateZapatosTable extends Migration
      */
     public function up()
     {
-        Schema::create('zapatos', function (Blueprint $table) {
+        Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-            $table->string('pedido');
+            $table->string('nombre');
+            $table->timestamps();
+        });
+
+
+        Schema::create('pedidos', function (Blueprint $table) {
+            $table->id();
+            $table->string('tipo');
+            $table->string('modelo');
+            $table->integer('talla');
+            $table->string('color');
+            $table->string('imagen');
+            $table->foreignId('categoria_id')->references('id')->on('categorias');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -27,6 +40,7 @@ class CreateZapatosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('zapatos');
+        Schema::dropIfExists('pedidos');
+        Schema::dropIfExists('categorias');
     }
 }

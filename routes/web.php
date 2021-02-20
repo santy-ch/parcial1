@@ -22,6 +22,9 @@ Route::get('/', function () {
 Route::get('/zapatos', 'ZapatosController@index')->name('zapatos.index');
 Route::get('/zapatos/create', 'ZapatosController@create')->name('zapatos.create');
 Route::post('/zapatos', 'ZapatosController@store')->name('zapatos.store');
+Route::get('/zapatos/{pedido}', 'ZapatosController@show')->name('zapatos.show');
+Route::get('/zapatos/{pedido}/edit', 'ZapatosController@edit')->name('zapatos.edit');
+Route::put('/zapatos/{pedido}', 'ZapatosController@update')->name('zapatos.update');
 
 Auth::routes();
 

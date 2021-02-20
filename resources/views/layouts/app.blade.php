@@ -16,6 +16,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    @yield('styles')
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -73,14 +75,15 @@
         </nav>
         <div class="container">
             <div class="row">
-                    <div class="py-4 mt-5 col-12">
+                    <div class="py-4 mt-5 col-4 ml-5">
                         @yield('botones')
                     </div>
-                    <main class="py-4 mt-5 col-12">
+                    <main class="py-4 col-12">
                         @yield('content')
                     </main>
             </div>
         </div> 
     </div>
+    @yield('scripts')
 </body>
 </html>
