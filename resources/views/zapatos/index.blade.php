@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('botones')
-    <a href={{route('zapatos.create')}} class="btn btn-primary">Calzado personalizado</a>
+    <a href={{route('pedidos.create')}} class="btn btn-primary">Calzado personalizado</a>
 @endsection
 @section('content')
 <h1 class="text-center mb-5">VARIEDADES DE CALZADO</h1>
@@ -23,8 +23,8 @@
                     <td>{{$userZapato->talla}}</td>
                     <td>{{$userZapato->color}}</td>
                     <td>
-                    <a href="{{route('zapatos.show',['pedido'=>$userZapato->id])}}" class="btn btn-success">Ver</a>
-                    <a href="{{route('zapatos.edit',['pedido'=>$userZapato->id])}}" class="btn btn-dark">Editar</a>
+                    <a href="{{route('pedidos.show',['pedido'=>$userZapato->id])}}" class="btn btn-success">Ver</a>
+                    <a href="{{route('pedidos.edit',['pedido'=>$userZapato->id])}}" class="btn btn-dark">Editar</a>
                     <a href="" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>

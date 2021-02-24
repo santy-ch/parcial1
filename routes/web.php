@@ -19,12 +19,12 @@ Route::get('/', function () {
 
 
 
-Route::get('/zapatos', 'ZapatosController@index')->name('zapatos.index');
-Route::get('/zapatos/create', 'ZapatosController@create')->name('zapatos.create');
-Route::post('/zapatos', 'ZapatosController@store')->name('zapatos.store');
-Route::get('/zapatos/{pedido}', 'ZapatosController@show')->name('zapatos.show');
-Route::get('/zapatos/{pedido}/edit', 'ZapatosController@edit')->name('zapatos.edit');
-Route::put('/zapatos/{pedido}', 'ZapatosController@update')->name('zapatos.update');
+Route::get('/pedidos', 'PedidoController@index')->name('pedidos.index');
+Route::get('/pedidos/create', 'PedidoController@create')->name('pedidos.create');
+Route::post('/pedidos', 'PedidoController@store')->name('pedidos.store');
+Route::get('/pedidos/{pedido}', 'PedidoController@show')->name('pedidos.show');
+Route::get('/pedidos/{pedido}/edit', 'PedidoController@edit')->name('pedidos.edit');
+Route::put('/pedidos/{pedido}', 'PedidoController@update')->name('pedidos.update');
 
 Auth::routes();
 

@@ -6,14 +6,14 @@
 @endsection
 
 @section('botones')
-    <a href={{route('zapatos.index')}} class="btn btn-primary  mr-2 text-white ml-5">Menu principal</a>
+    <a href={{route('pedidos.index')}} class="btn btn-primary  mr-2 text-white ml-5">Menu principal</a>
 @endsection
 
 @section('content')
     <h2 class="text-center mb-5"> Editar pedido:</h2>
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <form method="POST" action="{{route('zapatos.update', ['pedido'=>$pedido->id])}}" enctype="multipart/form-data" novalidate>
+                <form method="POST" action="{{route('pedidos.update', ['pedido'=>$pedido->id])}}" enctype="multipart/form-data" novalidate>
                     @csrf
                     @method('put')
                     

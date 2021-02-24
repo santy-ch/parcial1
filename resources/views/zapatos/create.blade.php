@@ -4,13 +4,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.css" integrity="sha512-CWdvnJD7uGtuypLLe5rLU3eUAkbzBR3Bm1SFPEaRfvXXI2v2H5Y0057EMTzNuGGRIznt8+128QIDQ8RqmHbAdg==" crossorigin="anonymous" />
 @endsection
 @section('botones')
-    <a href={{route('zapatos.index')}} class="btn btn-primary">Menu de calzado</a>
+    <a href={{route('pedidos.index')}} class="btn btn-primary">Menu de calzado</a>
 @endsection
     @section('content')
     <h2 class="text-center mb-5">Realice el pedido del calzado de su preferencia</h2>
         <div class="row justify-content-center mt-5">
                 <div class="col-md-8">
-                        <form method="POST" action="{{route('zapatos.store')}}" enctype="multipart/form-data" novalidate>
+                        <form method="POST" action="{{route('pedidos.store')}}" enctype="multipart/form-data" novalidate>
                             @csrf
 
                             <div class="form-group">
