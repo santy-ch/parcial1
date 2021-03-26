@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', 'PedidoController@home')->name('pedidos.home');
 
 
 Route::get('/pedidos', 'PedidoController@index')->name('pedidos.index');
@@ -25,6 +27,7 @@ Route::post('/pedidos', 'PedidoController@store')->name('pedidos.store');
 Route::get('/pedidos/{pedido}', 'PedidoController@show')->name('pedidos.show');
 Route::get('/pedidos/{pedido}/edit', 'PedidoController@edit')->name('pedidos.edit');
 Route::put('/pedidos/{pedido}', 'PedidoController@update')->name('pedidos.update');
+Route::delete('/pedidos/{pedido}', 'PedidoController@destroy')->name('pedidos.destroy');
 
 Auth::routes();
 

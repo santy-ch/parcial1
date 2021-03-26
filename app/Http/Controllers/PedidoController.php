@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Pedido;
+use Illuminate\Support\Facades\user;
 use App\Categoria;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
@@ -16,8 +19,15 @@ class PedidoController extends Controller
    public function index()
    {
        $userZapatos=Auth::user()->userPedidos;
-       return view('zapatos.index')->with('userZapatos',$userZapatos);;
+       return view('zapatos.index')->with('userZapatos',$userZapatos);
+       
    }
+
+   public function home(){
+    $userZapatos=Auth::user()->userPedidos;
+
+    return view('zapatos.menu')->with('userZapatos', $userZapatos);
+}
 
    /**
     * Show the form for creating a new resource.
@@ -136,6 +146,7 @@ class PedidoController extends Controller
     */
    public function destroy(Pedido $pedido)
    {
-       //
+       $pedido->delete();
+       return redirect()->action('PedidoController@index');
    }
 }

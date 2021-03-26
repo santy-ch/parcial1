@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('botones')
+    <a href={{route('pedidos.index')}} class="btn btn-primary  mr-2 text-white ml-5">Menu principal</a>
+@endsection
+
 @section('content')
     
     <article class="contenido-pedido">

@@ -23,9 +23,9 @@
                     <td>{{$userZapato->talla}}</td>
                     <td>{{$userZapato->color}}</td>
                     <td>
-                    <a href="{{route('pedidos.show',['pedido'=>$userZapato->id])}}" class="btn btn-success">Ver</a>
-                    <a href="{{route('pedidos.edit',['pedido'=>$userZapato->id])}}" class="btn btn-dark">Editar</a>
-                    <a href="" class="btn btn-danger">Eliminar</a>
+                    <a href="{{route('pedidos.show',['pedido'=>$userZapato->id])}}" class="btn btn-success d-block">Ver</a>
+                    <a href="{{route('pedidos.edit',['pedido'=>$userZapato->id])}}" class="btn btn-dark d-block">Editar</a>
+                    <eliminar-pedido id-pedido={{$userZapato->id}}></eliminar-pedido>
                     </td>
                 </tr>
              @endforeach
