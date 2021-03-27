@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('botones')
     <a href={{route('pedidos.create')}} class="btn btn-primary">Calzado personalizado</a>
+    <a href={{route('pedidos.home')}} class="btn btn-outline-dark btn-rounded text-black" data-mdb-ripple-color="dark">Menu principal</a>
+
 @endsection
 @section('content')
 <h1 class="text-center mb-5">VARIEDADES DE CALZADO</h1>
